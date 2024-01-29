@@ -8,6 +8,7 @@ int main(int argc, char **argv) {
 
     char *echo_msg = NULL;
     char *name = NULL;
+    int p = 0;
 
 
     // h: Help
@@ -21,7 +22,7 @@ int main(int argc, char **argv) {
                 puts("\nOptions:");
                 puts("\t-h: Print help message");
                 puts("\t-e [msg]: Echo message");
-                puts("\t-p Pong");
+                puts("\t-p Pong!");
                 return 0;
             
             case 'e':
@@ -31,7 +32,8 @@ int main(int argc, char **argv) {
                 name = optarg;
                 break;
             case 'p':
-                puts("Pong!");   
+                p = 1; 
+                break;
         }
     }
 
@@ -42,4 +44,6 @@ int main(int argc, char **argv) {
 
     if (echo_msg != NULL)
         puts(echo_msg);
+
+    if(p) puts("p");
 }

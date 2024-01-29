@@ -21,6 +21,7 @@ int main(int argc, char **argv) {
                 puts("\nOptions:");
                 puts("\t-h: Print help message");
                 puts("\t-e [msg]: Echo message");
+                puts("\t-p Pong");
                 return 0;
             
             case 'e':
@@ -29,6 +30,8 @@ int main(int argc, char **argv) {
             case 'n':
                 name = optarg;
                 break;
+            case 'p':
+                puts("Pong!");   
         }
     }
 
